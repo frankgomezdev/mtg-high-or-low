@@ -1,6 +1,6 @@
 # MTG High or Low - EDH Edition
 
-A guessing game built with Magic: The Gathering cards. Guess which Commander card's price value is higher or lower.
+Live Demo: https://mtg-high-or-low.vercel.app/
 
 ## Description
 
