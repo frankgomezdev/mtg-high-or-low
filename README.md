@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# MTG High or Low - EDH Edition
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A guessing game built with Magic: The Gathering cards. Guess which Commander card's price value is higher or lower.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+MTG High or Low - EDH Edition is a small browser-based game that uses the Scryfall API to fetch random Magic: The Gathering cards, specifically cards that can be used as a Commander in the EDH format. Players are shown a card and must guess whether the next card will have a higher or lower mana value. 
 
-## React Compiler
+### Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Random MTG card fetching via Scryfall API
+- Streak tracking
+- Card artwork display
+- Responsive design
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Vite
+- TypeScript
+- Tailwind CSS
+- SWR for data fetching
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Requirements
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 18+
+- npm or yarn
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/mtg-high-or-low.git
+
+# Navigate to the project directory
+cd mtg-high-or-low
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Usage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Once the development server is running, open your browser to `http://localhost:5173` (or whatever next port is available). You'll see two Magic cards displayed - click on whichever card you think has the higher price value. Once your selection is made, you will see the price for both cards. If you are correct, the card you selected will be kept and a new card will be introduced where you will have to make your selection again.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+## Roadmap
+
+- [ ] Update UI
+- [ ] Add sound effects
+- [ ] Implement leaderboard
+- [ ] Add difficulty modes
+
+## License
+
+MIT
+
+## Acknowledgments
+
+- Card data provided by [Scryfall API](https://scryfall.com/docs/api)
+- Magic: The Gathering is a trademark of Wizards of the Coast
