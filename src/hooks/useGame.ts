@@ -134,7 +134,7 @@ export function useGame() {
       const isCorrect = selectedCard.priceUsd >= otherCard.priceUsd;
 
       // Wait for reveal animation
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await new Promise((resolve) => setTimeout(resolve, 3000));
 
       if (isCorrect) {
         try {
